@@ -3,28 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/navigation-bar.css" />
     <title>Foodie</title>
+    <link rel="stylesheet" href="../css/navigation-bar.css" />
+    <!-- Styling for Search Icon -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="../javascript/navScript.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION BAR -->
-    <nav>
-      <div class="search">
-        <input class="search-box" type="text" placeholder="Search" />
-        <button
-          class="search-button"
-          type="submit"
-          style="background-color: transparent; border: none"
-        >
-          <img
-            class="search-icon"
-            src="../../public/asset/search-icon.png"
-            alt="search icon"
-          />
-        </button>
-      </div>
-      <div>
-        <button class="home-button">Home</button>
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <a href="#" class="logo">Foodies</a>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
       </div>
     </nav>
     <!-- END NAVIGATION BAR -->
