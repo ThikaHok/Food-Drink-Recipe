@@ -1,65 +1,31 @@
-//===========================================//
-//================ MEALDB ===================//
-//===========================================//
-
-// From: https://www.themealdb.com/api.php //
-
-//Get All Meal
-function getMeal() {
-  //Get All Meal to Display
+function getAllMeal() {
   fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      const mealList = document.getElementById("meal-list");
+      data.meals.forEach((meal) => {
+        const row = document.createElement("tr");
+        row.onclick = function () {
+          window.location.href = "food-details.html";
+        };
+        const imgCell = document.createElement("td");
+        const img = document.createElement("img");
+        img.src = meal.strMealThumb;
+        img.alt = meal.strMeal;
+        imgCell.appendChild(img);
+        row.appendChild(imgCell);
+        const nameCell = document.createElement("td");
+        nameCell.textContent = meal.strMeal;
+        row.appendChild(nameCell);
+        const categoryCell = document.createElement("td");
+        categoryCell.textContent = meal.strCategory;
+        row.appendChild(categoryCell);
+        const areaCell = document.createElement("td");
+        areaCell.textContent = meal.strArea;
+        row.appendChild(areaCell);
+        mealList.appendChild(row);
+      });
     });
 }
 
-//Get Meal by Name
-const searchBtn = document.getElementById("search-btn");
-searchBtn.addEventListener("click", searchMeal);
-function searchMeal() {
-  fetch(
-    `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchBtn.value}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
-}
-
-//Get Meal by Category
-const categoryBtn = document.getElementById("category-btn");
-categoryBtn.addEventListener("click", categoryMeal);
-function categoryMeal() {
-  fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryBtn.value}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
-}
-
-//Get Meal by Area
-const areaBtn = document.getElementById("area-btn");
-areaBtn.addEventListener("click", areaMeal);
-function areaMeal() {
-  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${areaBtn.value}`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
-}
-
-//Get Meal by Ingredient
-const ingredientBtn = document.getElementById("ingredient-btn");
-ingredientBtn.addEventListener("click", ingredientMeal);
-function ingredientMeal() {
-  fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientBtn.value}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
-}
+getAllMeal();
