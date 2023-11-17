@@ -27,6 +27,7 @@ strong {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
+  font-size: 18px;
 }
 
 .drink-image {
