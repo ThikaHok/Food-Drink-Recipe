@@ -5,6 +5,7 @@ function getAllDrink() {
       const drinkList = $("#meal-list");
       $.each(data.drinks, function (i, drink) {
         const row = $("<tr>").click(function () {
+          sessionStorage.setItem("selectedDrink", JSON.stringify(drink));
           window.location.href = "drink-details.html";
         });
         const imgCell = $("<td>");

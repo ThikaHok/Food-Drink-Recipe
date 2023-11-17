@@ -5,6 +5,7 @@ function getAllMeal() {
       const mealList = $("#meal-list");
       $.each(data.meals, function (i, meal) {
         const row = $("<tr>").click(function () {
+          sessionStorage.setItem("selectedMeal", JSON.stringify(meal));
           window.location.href = "food-details.html";
         });
         const imgCell = $("<td>");

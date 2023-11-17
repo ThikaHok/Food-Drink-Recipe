@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/nav-bar.css" />
-    <link rel="stylesheet" href="../css/food.css" />
+    <link rel="stylesheet" href="../css/drink.css" />
     <link rel="stylesheet" href="../css/table-content.css" />
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
     <title>Document</title>
@@ -37,18 +37,22 @@
       </div>
     </nav>
     <h3>Vodka</h3>
-    <div class="food-detail">
-      <div class="food-image">
+    <div class="drink-detail">
+      <div class="drink-image">
         <img src="../../public/asset/food.jpeg" alt="food" />
       </div>
-      <div class="food-content">
-        <div class="food-category">
+      <div class="drink-content">
+        <div class="drink-category">
           <strong>Category: </strong>
           <span>Breakfast</span>
         </div>
-        <div class="food-area">
-          <strong>Area: </strong>
-          <span>Cambodia</span>
+        <div class="drink-alcoholic">
+          <strong>Alcoholic: </strong>
+          <span>Non_Alcoholic</span>
+        </div>
+        <div class="drink-glass">
+          <strong>Glass: </strong>
+          <span>Cocktail_Glass</span>
         </div>
         <div class="food-instruction">
           <strong>Instruction: </strong>
@@ -68,17 +72,15 @@
         <tr>
           <th>Image</th>
           <th>Name</th>
+          <th>Measure</th>
         </tr>
       </thead>
       <tbody>
-        <tr onclick="window.location.href='#'">
-          <td>
-            <img src="../../public/asset/food.jpeg" alt="food" />
-          </td>
-          <td>This Name</td>
-        </tr>
+        <tr onclick="window.location.href='#'"></tr>
         <!-- Add more rows as needed -->
       </tbody>
     </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javascript/drink-detail.js"></script>
   </body>
 </html>
