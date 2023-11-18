@@ -47,3 +47,14 @@ p {
     font-size: 1.2rem;
     line-height: 1.5;
 }
+
+#homeview {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px; /* Adjust the value to position the image above the first h1 heading */
+    text-align: center;
+}
+
+h1:first-of-type {
+    margin-top: 0;
+}
