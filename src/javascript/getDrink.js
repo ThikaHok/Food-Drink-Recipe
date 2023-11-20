@@ -19,7 +19,7 @@ function getAllDrink() {
         row.append(nameCell);
         const categoryCell = $("<td>").text(drink.strCategory);
         row.append(categoryCell);
-        const areaCell = $("<td>").text("N/A");
+        const areaCell = $("<td>").text("Unavailable");
         row.append(areaCell);
         drinkList.append(row);
       });
