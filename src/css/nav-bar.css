@@ -1,17 +1,43 @@
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #8f9779;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #91b787;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 1rem;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #f5f5dc;
 }
 
 .logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f5f5dc;
+  display: flex;
+  padding: auto;
   color: #333333;
-  font-size: 2em; /* Adjust as needed */
+  font-size: 2em;
 }
 
 .search-bar {
@@ -40,16 +66,18 @@ input[type="text"] {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add a rough edge */
 }
 
+/*
 .home-btn {
   padding: 16px;
   height: 50px;
-  border: 1px solid black; /* Add a black border */
+  border: 1px solid black;
   background: #5a6268;
   color: white;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add a rough edge */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
   background: #6c757d;
-}
+} 
+*/

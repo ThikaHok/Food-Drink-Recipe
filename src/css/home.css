@@ -1,0 +1,60 @@
+h1,
+h2,
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 150px;
+  padding: 0;
+  text-align: center;
+  /* text-transform: uppercase; */
+  color: #333333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    margin: 2rem 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#homeview {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px; /* Adjust the value to position the image above the first h1 heading */
+    text-align: center;
+}
+
+h1:first-of-type {
+    margin-top: 0;
+}
