@@ -58,7 +58,7 @@ let tableBody = document.querySelector('#meal-list');
 searchBar.addEventListener('keyup', (e) => {
     let searchString = e.target.value.toLowerCase();
 
-    // Make a request to the API
+    // Make a request to the MealDB API
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchString}`)
         .then(response => response.json())
         .then(data => {
@@ -97,6 +97,44 @@ searchBar.addEventListener('keyup', (e) => {
             });
         })
         .catch(error => console.error(error));
+
+    // Make a request to the CocktailDB API
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchString}`)
+        .then(response => response.json())
+        .then(data => {
+            // Filter the drinks where the search string is at the start of the drink name
+            let filteredDrinks = data.drinks.filter(drink => 
+                drink.strDrink.toLowerCase().startsWith(searchString)
+            );
+
+            // Add new rows based on the filtered drinks
+            filteredDrinks.forEach(drink => {
+                let row = document.createElement('tr');
+
+                let imgCell = document.createElement('td');
+                let img = document.createElement('img');
+                img.src = drink.strDrinkThumb;
+                imgCell.appendChild(img);
+
+                let nameCell = document.createElement('td');
+                nameCell.textContent = drink.strDrink;
+
+                let categoryCell = document.createElement('td');
+                categoryCell.textContent = drink.strCategory;
+
+                let areaCell = document.createElement('td');
+                areaCell.textContent = drink.strAlcoholic;
+
+                row.appendChild(imgCell);
+                row.appendChild(nameCell);
+                row.appendChild(categoryCell);
+                row.appendChild(areaCell);
+
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error(error));
+        
 });
     </script>
   </body>
