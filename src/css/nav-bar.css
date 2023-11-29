@@ -51,7 +51,7 @@ input[type="text"] {
   height: 50px; /* Adjust this value to change the height of the search box */
   padding: 10px;
   border: 1px solid black; /* Add a black border */
-  border-radius: 25px 0 0 25px;
+  border-radius:25px;
   outline: none; /* Remove the default outline */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add a rough edge */
 }

@@ -20,10 +20,15 @@
   <body>
     <nav>
       <div class="logo">Foodies</div>
-      <ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div>
+        <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="index.html">Catalog</a></li>
       </ul>
+      </div>
     </nav>
     <table>
       <thead>
@@ -41,5 +46,58 @@
         <!-- Add more rows as needed -->
       </tbody>
     </table>
+
+    <script>
+// Get the search bar
+let searchBar = document.querySelector('.search-bar input');
+
+// Get the table body
+let tableBody = document.querySelector('#meal-list');
+
+// Add an event listener to the search bar
+searchBar.addEventListener('keyup', (e) => {
+    let searchString = e.target.value.toLowerCase();
+
+    // Make a request to the API
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchString}`)
+        .then(response => response.json())
+        .then(data => {
+            // Clear the existing table data
+            tableBody.innerHTML = '';
+
+            // Filter the meals where the search string is at the start of the meal name
+            let filteredMeals = data.meals.filter(meal => 
+                meal.strMeal.toLowerCase().startsWith(searchString)
+            );
+
+            // Add new rows based on the filtered meals
+            filteredMeals.forEach(meal => {
+                let row = document.createElement('tr');
+
+                let imgCell = document.createElement('td');
+                let img = document.createElement('img');
+                img.src = meal.strMealThumb;
+                imgCell.appendChild(img);
+
+                let nameCell = document.createElement('td');
+                nameCell.textContent = meal.strMeal;
+
+                let categoryCell = document.createElement('td');
+                categoryCell.textContent = meal.strCategory;
+
+                let areaCell = document.createElement('td');
+                areaCell.textContent = meal.strArea;
+
+                row.appendChild(imgCell);
+                row.appendChild(nameCell);
+                row.appendChild(categoryCell);
+                row.appendChild(areaCell);
+
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error(error));
+});
+    </script>
   </body>
 </html>
