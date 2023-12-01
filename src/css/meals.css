@@ -1,0 +1,49 @@
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 150px;
+  padding: 0;
+  text-align: center;
+  color: #333333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#meals-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+#meals-container div {
+    text-transform: capitalize;
+    text-align: center;
+}
+#meals-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#meals-container img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
