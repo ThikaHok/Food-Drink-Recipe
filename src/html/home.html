@@ -9,16 +9,17 @@
         <link rel="stylesheet" href="../css/nav-bar.css" />
         <link rel="stylesheet" href="../css/table-content.css" />
         <link rel="stylesheet" href="../css/home.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <title>Home</title>
     </head>
     <body>
-        <nav>
-            <div class="logo">Foodies</div>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="index.html">Catalog</a></li>
-            </ul>
-        </nav>
+     <nav>
+        <div class="logo">Foodies</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Catalog</a></li>
+        </ul>
+    </nav>
         <main>
             <section>
                 <img id="homeview" src="../../public/asset/home.jpg" />
@@ -43,152 +44,166 @@
                 <h2>Featured Meals by Country</h2>
                 <div class="meal-container">
                     <div>
-                        <a href="index.html/Spain">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Spanish')">
                         <img src="../../public/asset/flags/spain-flag.png" />
                         </a>
                         <p>Spain</p>
                     </div>
                     <div>
-                        <a href="index.html/Turkey">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Turkish')">
                         <img src="../../public/asset/flags/turkey-flag.png" />
                         </a>
                         <p>Turkey</p>
                     </div>
                     <div>
-                        <a href="index.html/Canada">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Canadian')">
                         <img src="../../public/asset/flags/canada-flag.png" />
                         </a>
                         <p>Canada</p>
                     </div>
                     <div>
-                        <a href="index.html/America">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('American')">
                         <img src="../../public/asset/flags/america-flag.png" />
                         </a>
                         <p>America</p>
                     </div>
                     <div>
-                        <a href="index.html/Egypt">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Egyptian')">
                         <img src="../../public/asset/flags/egypt-flag.png" />
                         </a>
                         <p>Egypt</p>
                     </div>
                     <div>
-                        <a href="index.html/Italy">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Italian')">
                         <img src="../../public/asset/flags/italy-flag.png" />
                         </a>
                         <p>Italy</p>
                     </div>
                     <div>
-                        <a href="index.html/France">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('French')">
                         <img src="../../public/asset/flags/france-flag.png" />
                         </a>
                         <p>France</p>
                     </div>
                     <div>
-                        <a href="index.html/Britain">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('British')">
                         <img src="../../public/asset/flags/britain-flag.png" />
                         </a>
                         <p>Britain</p>
                     </div>
                     <div>
-                        <a href="index.html/India">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Indian')">
                         <img src="../../public/asset/flags/india-flag.png"/>
                         </a>
                         <p>India</p>
                     </div>
 
                     <div>
-                        <a href="index.html/Croatia">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Croatian')">
                         <img src="../../public/asset/flags/croatia-flag.png" />
                         </a>
                         <p>Croatia</p>
                     </div>
                     <div>
-                        <a href="index.html/China">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Chinese')">
                         <img src="../../public/asset/flags/china-flag.png" />
                         </a>
                         <p>China</p>
                     </div>
                     <div>
-                        <a href="index.html/Greece">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('British')">
                         <img src="../../public/asset/flags/greece-flag.png" />
                         </a>
                         <p>Greece</p>
                     </div>
                     <div>
-                        <a href="index.html/Ireland">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Irish')">
                         <img src="../../public/asset/flags/ireland-flag.png" />
                         </a>
                         <p>Ireland</p>
                     </div>
                     <div>
-                        <a href="index.html/Jamaica">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Jamaican')">
                         <img src="../../public/asset/flags/jamaica-flag.png" />
                         </a>
                         <p>Jamaica</p>
                     </div>
                     <div>
-                        <a href="index.html/Malaysia">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Malaysian')">
                         <img src="../../public/asset/flags/malaysia-flag.jpg" />
                         </a>
                         <p>Malaysia</p>
                     </div>
                     <div>
-                        <a href="index.html/Mexico">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Mexican')">
                         <img src="../../public/asset/flags/mexico-flag.png" />
                         </a>
                         <p>Mexico</p>
                     </div>
                     <div>
-                        <a href="index.html/Morrocco">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Moroccan')">
                         <img src="../../public/asset/flags/morrocco-flag.png" />
                         </a>
                         <p>Morrocco</p>
                     </div>
                     <div>
-                        <a href="index.html/Poland">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Polish')">
                         <img src="../../public/asset/flags/poland-flag.png" />
                         </a>
                         <p>Poland</p>
                     </div>
                     <div>
-                        <a href="index.html/Phillipines">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Phillipino')">
                         <img src="../../public/asset/flags/phillipines-flag.png" />
                         </a>
                         <p>The Phillipines</p>
                     </div>
                     <div>
-                        <a href="index.html/Portugal">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Portugese')">
                         <img src="../../public/asset/flags/portugal-flag.png" />
                         </a>
                         <p>Portugal</p>
                     </div>
                     <div>
-                        <a href="index.html/Russia">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Russian')">
                         <img src="../../public/asset/flags/russia-flag.png" />
                         </a>
                         <p>Russia</p>
                     </div>
                     <div>
-                        <a href="index.html/Thailand">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Thai')">
                         <img src="../../public/asset/flags/thailand-flag.jpg" />
                         </a>
                         <p>Thailand</p>
                     </div>
                     <div>
-                        <a href="index.html/Tunisia">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Tunisian')">
                         <img src="../../public/asset/flags/tunisia-flag.png" />
                         </a>
                         <p>Tunisia</p>
                     </div>
                     <div>
-                        <a href="index.html/Vietnam">
+                        <a href="#" onclick="event.preventDefault();  fetchCountryMeals('Vietnamese')">
                         <img src="../../public/asset/flags/vietnam-flag.png" />
                         </a>
                         <p>Vietnam</p>
                     </div>
                 </div>
             </section>
+            <script>
+              function fetchCountryMeals(countryCode) {
+                $.getJSON(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${countryCode}`)
+                    .done(function(data) {
+                        sessionStorage.setItem('meals', JSON.stringify(data.meals));
+                        console.log(sessionStorage.getItem('meals'));
+                        window.location.href = 'meals.html'; // redirect to the meals page
+                    })
+                    .fail(function(jqxhr, textStatus, error) {
+                        var err = textStatus + ", " + error;
+                        console.log("Request Failed: " + err);
+                    });
+                }
+            </script>
         </main>
         <footer>
             <p>© 2023 Foodies</p>
