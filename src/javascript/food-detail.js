@@ -5,7 +5,9 @@ $(document).ready(function () {
   $(".food-image img").attr("src", meal.strMealThumb);
   $(".food-category span").text(meal.strCategory);
   $(".food-area span").text(meal.strArea);
-  $(".food-instruction span").text(meal.strInstructions);
+  $(".food-instruction span").html(
+    "<br><br>" + meal.strInstructions.replace(/\r\n/g, "<br><br>")
+  );
 
   const ingredients = [];
   for (let i = 1; i <= 100; i++) {
@@ -27,7 +29,8 @@ $(document).ready(function () {
     );
     tdImg.append(img);
     const tdName = $("<td>").text(ingredient.name);
-    tr.append(tdImg, tdName);
+    const tdMessure = $("<td>").text(ingredient.measure);
+    tr.append(tdImg, tdName, tdMessure);
     tbody.append(tr);
   });
 });

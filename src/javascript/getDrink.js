@@ -5,6 +5,7 @@ function getAllDrink() {
       const drinkList = $("#meal-list");
       $.each(data.drinks, function (i, drink) {
         const row = $("<tr>").click(function () {
+          sessionStorage.setItem("selectedDrink", JSON.stringify(drink));
           window.location.href = "drink-details.html";
         });
         const imgCell = $("<td>");
@@ -18,7 +19,7 @@ function getAllDrink() {
         row.append(nameCell);
         const categoryCell = $("<td>").text(drink.strCategory);
         row.append(categoryCell);
-        const areaCell = $("<td>").text("N/A");
+        const areaCell = $("<td>").text("Unavailable");
         row.append(areaCell);
         drinkList.append(row);
       });

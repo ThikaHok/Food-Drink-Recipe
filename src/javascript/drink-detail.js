@@ -28,7 +28,8 @@ $(document).ready(function () {
     );
     tdImg.append(img);
     const tdName = $("<td>").text(ingredient.name);
-    tr.append(tdImg, tdName);
+    const tdMeasure = $("<td>").text(ingredient.measure ? ingredient.measure : "Not Available");
+    tr.append(tdImg, tdName, tdMeasure);
     tbody.append(tr);
   });
 });
