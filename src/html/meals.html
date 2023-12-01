@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/nav-bar.css" />
+        <link rel="stylesheet" href="../css/table-content.css" />
+        <link rel="stylesheet" href="../css/home.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <title>Meals</title>
+    </head>
+    <body>
+        <nav>
+           <div class="logo">Foodies</div>
+           <ul>
+               <li><a href="home.html">Home</a></li>
+               <li><a href="index.html">Catalog</a></li>
+           </ul>
+       </nav>
+    
+        <h1>Meals</h1>
+        <div id="meals-container"></div>
+
+        <script>
+        $(document).ready(function() {
+            const meals = JSON.parse(sessionStorage.getItem('meals'));
+            console.log(meals);
+            if (meals) { // Check if meals is not null
+                meals.forEach(meal => {
+                    $('#meals-container').append(`
+                        <div>
+                            <h2>${meal.strMeal}</h2>
+                            <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                        </div>
+                    `);
+                });
+            } else {
+                console.log('No meals data in sessionStorage');
+            }
+        });
+        </script>
+
+</body>
+</html>
